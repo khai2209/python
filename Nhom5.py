@@ -137,6 +137,39 @@ def them_sinh_vien_vao_phong(self):
     tien_thanh_toan = float(input("Nhập số tiền đã thanh toán của sinh viên: ")) 
     # tạo đối tượng
     sinh_vien = SinhVien(ma_sinh_vien, ho_ten, gioi_tinh, lop, khoa, tien_thanh_toan)
+    phong_can_them.them_sinh_vien(sinh_vien)
+    print(f"Đã thêm sinh viên {ho_ten} vào phòng {ma_phong}.")
+
+def tim_kiem_phong(self):
+    print("\n--- Tìm kiếm phòng ký túc xá ---")
+    ma_phong = input("Nhập mã phòng (để trống nếu không muốn tìm theo mã phòng): ")
+    vi_tri = input("Nhập vị trí phòng (để trống nếu không muốn tìm theo vị trí): ")
+    loai_phong = input("Nhập loại phòng (để trống nếu không muốn tìm theo loại phòng): ")
+    phong_tim_thay = []
+    for phong in self.quan_ly_phong.danh_sach_phong:
+        if (not ma_phong or phong.ma_phong.lower() == ma_phong.lower()) and (not vi_tri or phong.vi_tri.lower() == vi_tri.lower()) and (not loai_phong or phong.loai_phong.lower() == loai_phong.lower() == loai_phong.lower()):
+            phong_tim_thay.append(phong)
+    if not phong_tim_thay:
+        print("Không có phòng:")
+    else:
+        print("Danh sách phong:")
+        for index, phong in enumerate(phong_tim_thay):
+             print(f"{index+1}. Mã phòng: {phong.ma_phong}, Vị trí: {phong.vi_tri}, Loại phòng: {phong.loai_phong}")
+
+#Sửa thông tin phòng 
+def sua_thong_tin(self):
+    print("\n--- Sửa thông tin phòng ký túc xá ---")
+    ma_phong = input("Nhập mã phòng cần sửa thông tin: ")
+    #Tìm phngf trong danh sách quản lý
+    phong_can_sua = None
+    for phong in self.quan_ly_phong.danh_sach_phong:
+        if phong.ma_phong == ma_phong:
+            phong_can_sua = phong
+            break
+    if phong_can_sua is None:
+        print(f"Không tìm thấy phòng có mã {ma_phong}.")
+        return
+
 #Menu
 class Main:
     def __init__(self):
@@ -166,8 +199,7 @@ class Main:
             elif choice == '5':
                 self.them_sinh_vien_vao_phong()
             elif choice == '6':
-                # Tìm kiếm phòng ký túc xá
-                pass # Thêm code tương ứng
+                self.tim_kiem_phong()
             elif choice == '7':
                 # Sửa thông tin phòng
                 pass # Thêm code tương ứng
