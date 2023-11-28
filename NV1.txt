@@ -1,0 +1,37 @@
+1. Quy ước đặt tên:
+
+	Sử dụng CamelCase cho tên lớp (ví dụ: ManageRoom).Viết hoa ở đầu mỗi từ
+	Sử dụng snake_case cho tên biến và phương thức (ví dụ: add_room hoặc calculate_cost).
+
+2. tạo lớp Room
+class Room:
+    def __init__(self, room_number, room_type, capacity):
+        self.room_number = room_number
+        self.room_type = room_type
+        self.capacity = capacity
+        self.occupants = []
+        self.services = []
+
+    def add_occupant(self, person):
+        # logic to add a person to the room
+        pass
+
+    def add_service(self, service):
+        # logic to add a service to the room
+        pass
+
+    def calculate_cost(self):
+        # logic to calculate the cost of the room
+        pass
+
+3. Tạo lớp Person
+class Person:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+4. Tạo lớp Service
+class Service:
+    def __init__(self, service_name, cost):
+        self.service_name = service_name
+        self.cost = cost

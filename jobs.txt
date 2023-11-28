@@ -1,0 +1,21 @@
+Người 1 - Quy ước đặt tên và Tạo lớp cơ bản:
+
+Đặt quy ước chung cho việc đặt tên biến, lớp, phương thức để đảm bảo tính nhất quán và dễ quản lý.
+Xây dựng các lớp cơ bản như Room, Person, Service, định nghĩa các thuộc tính và phương thức cơ bản.
+Người 2 - Tạo lớp ManageRoom:
+
+Phát triển lớp ManageRoom, bổ sung các phương thức để thêm và quản lý thông tin phòng ký túc xá.
+Người 3 - Xây dựng chức năng thanh toán:
+
+Tích hợp chức năng tính toán chi phí dịch vụ và phòng ở, bao gồm cả việc thanh toán và xuất hóa đơn.
+Người 4 - Xây dựng giao diện người dùng:
+
+Tạo các menu và giao diện tương tác để người dùng có thể thực hiện các yêu cầu được liệt kê trong đề bài.
+Người 5 - Kiểm thử và Debug:
+
+Thực hiện kiểm thử cho từng phần của chương trình để đảm bảo chúng hoạt động chính xác.
+Phát hiện và sửa các lỗi phát sinh trong quá trình kiểm thử.
+Người 6 - Tài liệu và Báo cáo:
+
+Soạn thảo tài liệu sử dụng, tài liệu kỹ thuật cho chương trình.
+Chuẩn bị báo cáo và trình bày tổng quan về dự án và kết quả kiểm thử.
